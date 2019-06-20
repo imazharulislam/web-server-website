@@ -1,4 +1,4 @@
-
+console.log('hello world');
 const search = document.querySelector('input');
 const weatherForm = document.querySelector('form');
 const pone = document.getElementById('one');
