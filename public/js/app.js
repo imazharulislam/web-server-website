@@ -16,11 +16,11 @@ weatherForm.addEventListener('submit', function(e) {
             pone.textContent = data.error;
             ptwo.textContent = '';
             } else {
-            pone.textContent = data.forecast;
-            ptwo.textContent = data.location;
+            pone.textContent = data.location;
+            ptwo.textContent = data.forecast;
             }
     })
-e.target.reset();
+search.value = '';
 
     
 
