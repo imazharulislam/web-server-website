@@ -42,30 +42,6 @@ app.get('/help', (req,res) => {
     })
 });
 
-app.get('/check', (req,res) => {
-    if(!req.query.address){
-        res.send({error: 'please provide a address.'})
-    } else {
-        geocode(req.query.address, (err, {latitude,longitude,location} = {}) => {
-            if(err) {
-                res.send({error: err})
-            } else {
-                forecast(latitude, longitude, (forecastErr,forecastData) => {
-                    if(forecastErr){
-                        res.send({error: forecastErr})
-                    } else {
-                        res.send({
-                            forecastData,
-                            location: location,
-                            adress: req.query.address,
-                        })
-                    }
-                })
-            }
-        })
-    }
-});
-
 app.get('/weather', (req,res) => {
     if(!req.query.address) {
         return res.send({
@@ -90,21 +66,6 @@ app.get('/weather', (req,res) => {
 		})
     }
 });
-
-app.get('/products', (req,res) => {
-    if(!req.query.search) {
-      return res.send({
-            error: 'you must a search terms'
-        })
-    } 
-    console.log(req.query.search);
-    res.send({
-        product: []
-    })
-
-})
-
-
 
 app.get('/help/*', (req,res) => {
     res.render('helpErr', {
