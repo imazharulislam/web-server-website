@@ -41,7 +41,7 @@ header a {
 
 p {
     color: #333333;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 form input{
@@ -53,14 +53,10 @@ form input{
 }
 ::placeholder {
     color: #333333;
-    
-  }
-
-  -ms-::placeholder {
+}
+::-moz-placeholder {
     color: #333333;
-    
-  }
-  
+}
 form button{
     color: white;
     border: 1px solid #333333;
