@@ -30,14 +30,14 @@ app.get('' ,(req,res) => {
 
 app.get('/about', (req,res) => {
     res.render('about', {
-        title : 'About Me',
+        title : 'About me',
         name: 'Mazharul Islam Emon'
     })
 });
 
 app.get('/help', (req,res) => {
     res.render('help', {
-        title : 'Help Page',
+        title : 'Help page',
         name: ' Mazharul Islam'
     })
 });
@@ -45,7 +45,7 @@ app.get('/help', (req,res) => {
 app.get('/weather', (req,res) => {
     if(!req.query.address) {
         return res.send({
-            error : 'you must provide a address'
+            error : 'You must provide a address.'
         });
     } else {
         geocode(req.query.address , (error,response) => {

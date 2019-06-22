@@ -19,9 +19,7 @@ weatherForm.addEventListener('submit', function(e) {
             pone.textContent = data.location;
             ptwo.textContent = data.forecast;
             }
-    }).catch(e => {
-        pone.textContent ='INTERNET DISCONNECTED.';
-    })
+    });
 search.value = '';
 
     

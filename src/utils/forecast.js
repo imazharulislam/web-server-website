@@ -6,7 +6,7 @@ function forecast(latitude,longitude,callback){
    	if(err){
    		callback('unable to connect to the api . please check your network',undefined);
     } else if(body.code) {
-    	callback('please provide a valid address', undefined);
+    	callback('Unable to find location. Try another search.', undefined);
     } else {
     	callback(undefined, `the summary of the place is ${body.currently.summary} and icon is ${body.currently.icon}. temperature is ${body.currently.temperature}`);
     }	
